@@ -1,4 +1,4 @@
-var socketIo = io('http://localhost:3000');
+var socketIo = io('https://video-call-chung-pham.herokuapp.com');
 function openStream() {
     const config = { audio: false, video: true };
     return navigator.mediaDevices.getUserMedia(config);
@@ -9,12 +9,13 @@ function playStream(idVideoTag, stream) {
     video.play();
 }
 //openStream().then(stream => playStream('localStream', stream));
-
+$('.first').show();
+$('.box').hide();
 $(document).ready(function() {
     var txtSignup;
     $('.first').show();
     $('.box').hide();
-    const peer = new Peer({key: 'lwjd5qra8257b9'});
+    const peer = new Peer({key: 'peerjs', host: 'video-call-chung-pham.herokuapp.com', secure: true, port: 443});
     peer.on('open', function(id) {
         $('#id_').append(id);
         $('.btnSignup').click(function() {
