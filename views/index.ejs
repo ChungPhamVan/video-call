@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web-RTC</title>
+        <script src="javascript/jquery.js"></script>
+        <script src="javascript/peer.js"></script>
+        <link rel="stylesheet" href="style/index.css">
+        <script src = "https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"> </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="socket.io/socket.io.js"></script>
+        <script src="javascript/main.js"></script>
+    </head>
+    <body>
+        
+        <h3 id="id_">Id: </h3>
+        <div class="boxSub first">
+            <input type="text" class="form-control txtSignup" placeholder="Enter your name ...">
+            <button class="btn btn-primary btnSignup">Sign up</button>
+        </div>
+        <div class="box">
+            <div class="boxInput">
+                <div class="boxTitle">
+                    <h4 class="title">Hello <span class="titleName"></span>!!!</h4>
+                    <button class="btn btn-primary btnLogout">Log out</button>
+                </div>
+                <div class="boxSub">
+                    <input type="text" class="txtIdCall form-control" placeholder="Enter your friend name ...">
+                    <button class="btn btn-primary btnCall">Call</button>
+                </div>
+                <h2 class="w-100 text-center">List Friend</h2>
+                <div class="listFriend">
+                    
+                </div>
+            </div>
+            <video id="localStream" controls></video>
+            <br /><br />
+            <video id="remoteStream" controls></video>
+            <br /><br />
+            
+        </div>
+        
+        
+    </body>
+</html>
