@@ -15,7 +15,7 @@ $(document).ready(function() {
     var txtSignup;
     $('.first').show();
     $('.box').hide();
-    const peer = new Peer({key: 'peerjs', host: 'video-call-chung-pham.herokuapp.com', secure: true, port: 443});
+    const peer = new Peer({key: 'lwjd5qra8257b9'});
     peer.on('open', function(id) {
         $('#id_').append(id);
         $('.btnSignup').click(function() {
