@@ -89,6 +89,7 @@ $(document).ready(function() {
     socketIo.on('1-user-logout', function() {
         $('.first').show(1000);
         $('.box').hide(1000);
+        $('.txtSignup').val('');
     });
     $('.listFriend').on('click', 'button', function() {
         const idCall = $(this).attr('id');

@@ -29,6 +29,11 @@ socketIo.on('connection', function(socket) {
         socket.broadcast.emit('server-send-listFriend', listFriend);
         socket.emit('1-user-logout');
     });
+    socket.on('disconnect', function() {
+        const indexUser = listFriend.indexOf(socket.user);
+        listFriend.splice(indexUser, 1);
+        socket.broadcast.emit('server-send-listFriend', listFriend);
+    });
 });
 app.get('/', function(req, res, next) {
     res.render('index.ejs');
